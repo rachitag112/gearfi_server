@@ -25,6 +25,6 @@ const schema = new mongoose.Schema({
     }
 });
 
-const offer = mongoose.model('offer', schema);
+const offer = mongoose.model('offers', schema);
 
 module.exports = offer;

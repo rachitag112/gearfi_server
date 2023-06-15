@@ -19,6 +19,6 @@ const schema = new mongoose.Schema({
     },
 });
 
-const listing = mongoose.model('listing', schema);
+const listing = mongoose.model('listings', schema);
 
 module.exports = listing;

@@ -16,6 +16,6 @@ const schema = new mongoose.Schema({
     }
 });
 
-const transfer = mongoose.model('transfer', schema);
+const transfer = mongoose.model('transfers', schema);
 
 module.exports = transfer;
