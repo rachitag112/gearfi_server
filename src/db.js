@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const URI = "mongodb+srv://gearfi_test:gearfi_test@cluster0.ocz9scm.mongodb.net/";
+require('dotenv').config({ path: './.env' })
+
+const URI = process.env.mongo_URI;
 
 const connection = mongoose
   .connect(URI, {

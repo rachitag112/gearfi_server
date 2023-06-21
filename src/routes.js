@@ -6,8 +6,6 @@ const offer = require("./models/offer");
 const transfer = require("./models/transfer");
 const path = require("path");
 
-
-
 router.get("/", (req, res) => {
   res.send("GearFi Rocks!");
 });

@@ -1,16 +1,16 @@
-const express = require('express');
-const routes = require('./src/routes');
+const express = require('express')
+const bodyParser = require('body-parser')
+const assetsRouter = require('./src/assetsRoutes')
+const db = require('./src/db')
 
-const app = express();
-const PORT = 3000;
+const app = express()
 
-app.use("/",routes)
-app.use(express.json());
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.listen(PORT, (error) =>{
-    if(!error)
-        console.log("Server is Successfully Running, and App is listening on port "+ PORT)
-    else 
-        console.log("Error occurred, server can't start", error);
-    }
-);
+app.use('/', assetsRouter)
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log(`App running on port ${port}...`)
+})
