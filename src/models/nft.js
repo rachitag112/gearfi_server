@@ -21,7 +21,7 @@ const schema = new mongoose.Schema({
         type:Number
     },
     state:{
-        type:JSON
+        type:String
     },
     // category:{
     //     type:String
